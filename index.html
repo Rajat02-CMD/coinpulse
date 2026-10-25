@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="CoinPulse helps you track cryptocurrency prices, market capitalization, 24-hour changes, and your personal watchlist."
+  >
+
+  <meta name="theme-color" content="#0b1120">
+
+  <title>CoinPulse | Crypto Market Dashboard</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header class="header">
+    <a href="#" class="logo" aria-label="CoinPulse home">
+      CoinPulse
+    </a>
+
+    <span class="market-status">
+      Crypto Market
+    </span>
+  </header>
+
+  <main class="container">
+    <section class="hero" aria-labelledby="hero-title">
+      <p class="eyebrow">MARKET OVERVIEW</p>
+
+      <h1 id="hero-title">
+        Crypto market, at a glance.
+      </h1>
+
+      <p>
+        Feel the pulse of the crypto market. Track prices,
+        compare market movements and build your watchlist.
+      </p>
+    </section>
+
+    <section
+      class="market-section"
+      aria-labelledby="market-title"
+    >
+      <div class="section-heading">
+        <div>
+          <h2 id="market-title">Top Cryptocurrencies</h2>
+
+          <p id="result-count" aria-live="polite">
+            Preparing market data...
+          </p>
+        </div>
+
+        <button
+          id="refresh-button"
+          type="button"
+        >
+          Refresh
+        </button>
+      </div>
+
+      <div class="toolbar">
+        <div class="search-wrapper">
+          <label
+            class="visually-hidden"
+            for="coin-search"
+          >
+            Search cryptocurrencies by name or symbol
+          </label>
+
+          <input
+            id="coin-search"
+            type="search"
+            placeholder="Search Bitcoin, ETH..."
+            autocomplete="off"
+          >
+        </div>
+
+        <div class="sort-wrapper">
+          <label
+            class="visually-hidden"
+            for="sort-select"
+          >
+            Sort cryptocurrencies
+          </label>
+
+          <select id="sort-select">
+            <option value="market_cap">Market Cap</option>
+            <option value="price">Price: High to Low</option>
+            <option value="change">24h Change: High to Low</option>
+          </select>
+        </div>
+
+        <button
+          id="watchlist-toggle"
+          type="button"
+          aria-pressed="false"
+        >
+          ⭐ Watchlist
+        </button>
+      </div>
+
+      <p
+        id="status-message"
+        role="status"
+        aria-live="polite"
+      >
+        Loading market data...
+      </p>
+
+      <div
+        id="coin-grid"
+        class="coin-grid"
+        aria-label="Cryptocurrency results"
+      ></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>CoinPulse — Built with HTML, CSS and Vanilla JavaScript</p>
+    <p>Market data provided by CoinGecko.</p>
+  </footer>
+</body>
+</html>
